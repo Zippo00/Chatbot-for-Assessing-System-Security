@@ -1,5 +1,5 @@
 # Chatbot-for-Assessing-System-Security
-Codebase for Chatbot for Assessing System Security with GPT-3.5. Publication available from urn.fi/URN:NBN:fi:oulu-202306292789
+Codebase for Chatbot for Assessing System Security with GPT-3.5. Publication available from [urn.fi/URN:NBN:fi:oulu-202306292789](urn.fi/URN:NBN:fi:oulu-202306292789)
 
 # Installation
 This documentation assumes you already have a virtual machine set up for hosting the application.
@@ -55,9 +55,9 @@ pyenv global 3.10.6
 
 
 ## 3)	Install required `Python` packages
-Navigate to the parent `public_chatbot_backend` directory:
+Navigate to the `Chatbot-for-Assessing-System-Security/app/backend` directory:
 ```sh
-cd public_chatbot_backend
+cd Chatbot-for-Assessing-System-Security/app/backend
 ```
 
 Upgrade `pip` and install requirements:
@@ -163,7 +163,7 @@ server {
 
     location / {
         include uwsgi_params;
-        uwsgi_pass unix:/home/<YOUR USERNAME>/public_chatbot_backend/app.sock;
+        uwsgi_pass unix:/home/<YOUR USERNAME>/Chatbot-for-Assessing-System-Security/app/backend/app.sock;
     }
 }
 server {
@@ -171,7 +171,7 @@ server {
     server_name <YOUR IP ADDRESS>;
     location / {
         include uwsgi_params;
-        uwsgi_pass unix:/home/<YOUR USERNAME>/public_chatbot_backend/app.sock;
+        uwsgi_pass unix:/home/<YOUR USERNAME>/Chatbot-for-Assessing-System-Security/app/backend/app.sock;
     }
 }
 ``` 
@@ -223,7 +223,7 @@ After=network.target
 [Service]
 User=<YOUR USERNAME HERE>
 Group=www-data
-WorkingDirectory=/home/<YOUR USERNAME HERE>/public_chatbot_backend
+WorkingDirectory=/home/<YOUR USERNAME HERE>/Chatbot-for-Assessing-System-Security/app/backend
 ExecStart=/home/<YOUR USERNAME HERE>/.pyenv/shims/uwsgi --ini app.ini
 
 [Install]
