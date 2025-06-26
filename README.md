@@ -1,5 +1,5 @@
 # Chatbot-for-Assessing-System-Security
-Codebase for Chatbot for Assessing System Security with GPT-3.5
+Codebase for Chatbot for Assessing System Security with GPT-3.5. Publication available from urn.fi/URN:NBN:fi:oulu-202306292789
 
 # Installation
 This documentation assumes you already have a virtual machine set up for hosting the application.
